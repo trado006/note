@@ -18,6 +18,9 @@
   <input type="submit" value="Submit">
 </form>
 
+<div class="box">
+</div>
+
 <p>Click the "Submit" button and the form-data will be sent to a page on the 
 server called "action_page.php".</p>
 
@@ -80,5 +83,31 @@ select::-ms-expand {
 
 </style>
 
+<script>
+const el = document.querySelector("select");
+const box = document.querySelector(".box");
+
+const events = [
+  "click", "mousedown", "mouseup",
+  "focus", "blur", "focusin", "focusout",
+  "change", "input",
+  "keydown", "keyup", "keypress",
+  "mouseenter", "mouseleave", "mouseover", "mouseout",
+  "touchstart", "touchend",
+];
+	
+function log(msg) {
+  box.innerHTML += `<div>${msg}</div>`;
+}
+
+events.forEach(event => {
+  el.addEventListener(event, e => {
+    console.log("Event:", event, e);
+	log(`Event: ${event}`);
+  });
+});
+
+</script>
+	
 </body>
 </html>
