@@ -38,6 +38,46 @@ select {
   outline: none;
   border: 1px solid #ccc;
 }
+	
+/* Hover */
+select:hover {
+  border: none;
+  outline: none;
+}
+
+/* Focus */
+select:focus,
+select:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Active */
+select:active {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Disabled */
+select:disabled {
+  background: none;
+  color: inherit;
+  opacity: 1; /* tránh bị mờ */
+  cursor: not-allowed;
+}
+
+/* Invalid / Valid */
+select:invalid,
+select:valid {
+  box-shadow: none;
+  outline: none;
+}
+
+/* IE / Edge cũ */
+select::-ms-expand {
+  display: none;
+}
+
 </style>
 
 </body>
