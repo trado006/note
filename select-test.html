@@ -8,7 +8,7 @@
 
 <form action="/action_page.php">
   <label for="cars">Choose a car:</label>
-  <select name="cars" id="cars">
+  <select class="form-select" name="cars" id="cars">
     <option value="volvo">Volvo</option>
     <option value="saab">Saab</option>
     <option value="opel">Opel</option>
@@ -25,65 +25,28 @@
 server called "action_page.php".</p>
 
 <style>
-select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-	
-  border: none;
-  outline: none;
-  background: #ddf4ff;
-	
-  padding: 8px 10px;
-  font-size: 16px;
-  line-height: 100%;
-  color: green;
-  outline: none;
-  // border: 1px solid #ccc;
+.form-select {
+    display: block;
+    /* width: 100%; */
+    padding: .375rem 2.25rem .375rem .75rem;
+    -moz-padding-start: calc(0.75rem - 3px);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-image: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e);
+    background-repeat: no-repeat;
+    background-position: right .75rem center;
+    background-size: 16px 12px;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 	
-/* Hover */
-select:hover {
-  border: none;
-  outline: none;
-	background: #ddf4ff;
-}
-
-/* Focus */
-select:focus,
-select:focus-visible {
-  outline: none;
-  box-shadow: none;
-	background: #ddf4ff;
-}
-
-/* Active */
-select:active {
-  outline: none;
-  box-shadow: none;
-	background: #ddf4ff;
-}
-
-/* Disabled */
-select:disabled {
-  background: #ddf4ff;
-  color: inherit;
-  opacity: 1; /* tránh bị mờ */
-  cursor: not-allowed;
-}
-
-/* Invalid / Valid */
-select:invalid,
-select:valid {
-  box-shadow: none;
-  outline: none;
-	background: #ddf4ff;
-}
-
-/* IE / Edge cũ */
-select::-ms-expand {
-  display: none;
-}
 
 </style>
 
