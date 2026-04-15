@@ -67,10 +67,27 @@ select:valid {
         border-color 0.15s ease-in-out,
         box-shadow 0.15s ease-in-out;
 }
+@media (prefers-reduced-motion: reduce) {
+    .form-select {
+        transition: none;
+    }
+}
 .form-select:focus {
     border-color: #86b7fe;
     outline: 0;
     box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+.form-select[multiple],
+.form-select[size]:not([size="1"]) {
+    padding-right: 0.75rem;
+    background-image: none;
+}
+.form-select:disabled {
+    background-color: var(--bs-secondary-bg);
+}
+.form-select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 var(--bs-body-color);
 }
 
 </style>
