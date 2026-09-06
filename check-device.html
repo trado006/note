@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1 id="screen"></h1>
+
+    <script>
+document.write(`
+Viewport: ${window.innerWidth} × ${window.innerHeight}<br>
+Screen: ${screen.width} × ${screen.height}<br>
+Device Pixel Ratio: ${window.devicePixelRatio}<br>
+Physical pixel ước tính: 
+${window.innerWidth * window.devicePixelRatio}
+×
+${window.innerHeight * window.devicePixelRatio}
+`);
+    </script>
+</body>
+</html>
+
